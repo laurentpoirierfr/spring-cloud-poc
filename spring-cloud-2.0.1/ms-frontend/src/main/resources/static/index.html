@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>ms-frontend</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input class="form-control" id="firstname" aria-describedby="firstName" placeholder="Mickey" />
+        </div>
+        <button type="button" id="button" class="btn btn-info">Send!</button>
+    </form>
+
+    <br />
+
+    <div class="form-group">
+        <label for="Result">Result:</label>
+        <textarea rows="10" cols="100" id="result" class="form-control"></textarea>
+    </div>
+
+
+</div>
+
+<script>
+
+    function prettyJon(obj) {
+       $( "#result" ).html( JSON.stringify(obj, null, 5) );
+    }
+
+    $( "#button" ).click(function() {
+        var data = {
+            name : $("#firstname").val()
+        }
+        $( "#result" ).html("");
+        $.ajax({
+              type : 'GET',
+              url: "/api/service",
+              data: data,
+              success: function (result) {
+                prettyJon(result);
+              },
+              error: function (error){
+                prettyJon(error);
+              }
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

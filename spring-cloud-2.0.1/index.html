@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MS-IMA</title>
+
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        body {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+<center>
+    <h1>Spring Cloud Prototype</h1>
+</center>
+<br />
+<div class="row">
+    <div class="column">
+        <h2>Adminstration :</h2>
+        <ul>
+            <li><a href="http://localhost:8500/" target="_blank">Consul</a></li>
+            <li><a href="http://localhost:9090/#/wallboard" target="_blank">Spring Boot Admin</a></li>
+            <li><a href="http://localhost:9411/" target="_blank">Zipkin</a></li>
+        </ul>
+
+        <h2>Prototype :</h2>
+
+        <h3>ms-frontend</h3>
+        <ul>
+            <li><a href="http://localhost:8888/" target="_blank">Application Frontend</a></li>
+        </ul>
+        <h3>ms-service</h3>
+        <ul>
+            <li><a href="http://localhost:8080/service?name=test" target="_blank">Service : '/service?name=test' </a>
+            </li>
+        </ul>
+        <h3>ms-api</h3>
+        <ul>
+            <li><a href="http://localhost:8081/hello-world?name=test" target="_blank">API : '/hello-world?name=test'</a>
+            </li>
+        </ul>
+    </div>
+    <div class="column">
+        <img src="resources/call-service.png"/>
+    </div>
+</div>
+
+</body>
+</html>

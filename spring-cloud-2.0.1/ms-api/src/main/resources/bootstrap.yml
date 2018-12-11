@@ -1,0 +1,15 @@
+---
+spring:
+  application:
+    name: ms-api
+  cloud:
+    config:
+      uri: http://localhost:6666
+      failFast: true
+---
+# Info
+info:
+  app:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
