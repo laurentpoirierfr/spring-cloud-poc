@@ -1,7 +1,7 @@
 ---
 # server configuration
 server:
-  port: ${PORT:9411}
+  port: ${PORT:0}
 
 
 # Management configuration

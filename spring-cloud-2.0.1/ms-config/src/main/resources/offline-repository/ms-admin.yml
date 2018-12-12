@@ -17,7 +17,8 @@ spring:
     enabled: true
     sender:
       type: web
-    baseUrl: http://localhost:9411
+    serviceId: ms-zipkin
+    #baseUrl: http://localhost:9411
   cloud:
     bus:
       enabled: true
