@@ -6,7 +6,7 @@
     <groupId>org.homezone</groupId>
     <artifactId>ms-frontend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>${packaging.type}</packaging>
 
     <name>ms-frontend</name>
     <description>Demo project for Spring Boot</description>
